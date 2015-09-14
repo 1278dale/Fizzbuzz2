@@ -2,6 +2,7 @@ class FizzBuzz
 
 	def is_divisible_by_3?(number)
 		is_divisible_by?(number, 3)
+		return "Fizz"
 	end
 
 	def is_divisible_by_5?(number)
@@ -16,4 +17,14 @@ class FizzBuzz
 		number % divisor == 0
 	end
 
+	def fizzbuzz(number)
+		if is_divisible_by_15?(number)
+			return "FizzBuzz"
+			elseif is_divisible_by_3?(number)
+			return "Fizz"
+			elseif is_divisible_by_5?(number)
+			return "Buzz"
+		end
+		end
+	end
 end
