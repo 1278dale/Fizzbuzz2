@@ -18,13 +18,8 @@ class FizzBuzz
 	end
 
 	def fizzbuzz(number)
-		if is_divisible_by_15?(number)
-			return "FizzBuzz"
-			elseif is_divisible_by_3?(number)
-			return "Fizz"
-			elseif is_divisible_by_5?(number)
-			return "Buzz"
-		end
-		end
+		return "FizzBuzz" if is_divisible_by_15?(number)
+		return "Fizz" if is_divisible_by_3?(number)
+		return "Buzz" if is_divisible_by_5?(number)
 	end
 end
