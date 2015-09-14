@@ -15,11 +15,12 @@ describe FizzBuzz do
 				expect(fizzbuzz.is_divisible_by_5?(5)).to eq true
 		end
 
-	it "should know if it is divisible by 3 and 5" do
-			expect(fizzbuzz.is_divisible_by_15?(15)).to eq true
+		it "should know if it is divisible by 3 and 5" do
+				expect(fizzbuzz.is_divisible_by_15?(15)).to eq true
+		end
 	end
 
-	context "it is not divisible by"
+	context "it is not divisible by" do
 
 		it "should know if it is not divisible by 3" do
 			expect(fizzbuzz.is_divisible_by_3?(4)).to eq false
@@ -28,13 +29,24 @@ describe FizzBuzz do
 		it "should know if it is not divisible by 5" do
 			expect(fizzbuzz.is_divisible_by_5?(1)).to eq false
 		end
+	
+		it "should know if it is not divisible by 3 and 5" do
+			expect(fizzbuzz.is_divisible_by_15?(1)).to eq false
+		end
 	end
 
+	context "playing Fizz" do
 
-	context "Playing Fizz" do
-
-		"it should return fizz if a multiple of 3" do
+		it "should return fizz if a multiple of 3" do
 			expect(fizzbuzz.fizzbuzz(3)).to eq "Fizz"
+		end
+
+		it "should return buzz if divisible by 5" do
+			expect(fizzbuzz.fizzbuzz(5)).to eq "Buzz"
+		end
+
+		it "should return fizzbuzz if divisible by 3 and 5" do
+			expect(fizzbuzz.fizzbuzz(15)).to eq "Fizzbuzz"
 		end
 	end
 end
