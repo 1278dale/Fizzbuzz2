@@ -1,9 +1,12 @@
 require 'fizzbuzz'
 
-desbribe 'fizzbuzz' do 
-	it 'returns "fizz" when passed 3' do
-		expect(fizzbuzz)(3). to eq 'fizz'
-	end
+describe FizzBuzz do
 
-	it 'returns "fizz" when number can be divided by 3'
+	let (:fizzbuzz) {FizzBuzz.new}
+
+	it "should know if it is divisible by 3" do
+		expect (fizzbuzz.is_divisible_by_3?)(3)).to eq true
+	end
 end
+
+	
